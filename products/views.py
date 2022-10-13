@@ -5,12 +5,22 @@ from products.models import Products
 # Create your views here.
 
 def products_as_template(request):
-    context = {
-        'products': Products.objects.all()
-    }
+    filters = request.GET.get('manufacturer', None)
+
+    if filters is not None:
+        context = {
+            'products': Products.objects.filter(manufacturer__name__contains=filters),
+            'filters': filters
+        }
+    else:
+        context = {
+            'products': Products.objects.all(),
+            'filters': filters
+        }
+
     return render(request, 'products.html',context)
 
-    # Alternate way
+    # Alternate way -- one line code
     #return render(request, 'products.html', {'products': Products.objects.all()})
 
 

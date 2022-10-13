@@ -8,7 +8,9 @@
 
     <h1>{{ products.name }}</h1>
     <ul>
+        <img height="50px" src="{{ products.picture}}">
         <li>Price: {{ products.price }}</li>
+        <li>Manufacturer: {{ products.manufacturer.name }}</li>
     </ul>
 
     <a href="/products">Back...</a>
