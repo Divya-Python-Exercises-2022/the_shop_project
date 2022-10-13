@@ -8,15 +8,18 @@
  <h1>Details of {{ client_details.client.first_name }} </h1>
 
     <ul>
-        <li>First_name: {{ client_details.client.first_name }}</li>
-        <li>Last_name: {{ client_details.client.last_name }}</li>
-        <li>Email: {{ client_details.client.email }}</li>
-        <li>Phone: {{ client_details.client.phone}}</li>
-        <li>Street: {{ client_details.street }}</li>
-        <li>Number: {{ client_details.number }}</li>
-        <li>City: {{ client_details.city }}</li>
-        <li>Zip: {{ client_details.zip }}</li>
-        <li>country: {{ client_details.country }}</li>
+        <li>First_name: {{ client_details.first_name }}</li>
+        <li>Last_name: {{ client_details.last_name }}</li>
+        <li>Email: {{ client_details.email }}</li>
+        <li>Phone: {{ client_details.phone}}</li>
+
+        {% for address in addresses %}
+        <li>Street: {{ address.street }}</li>
+        <li>Number: {{ address.number }}</li>
+        <li>City: {{ address.city }}</li>
+        <li>Zip: {{ address.zip }}</li>
+        <li>country: {{ address.country }}</li>
+        {% endfor %}
     </ul>
 
     <a href="/clients">Back...</a>
