@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>List of Clients</h1>
+
+    <ul>
+        {% for client in clients %}
+             <li><a href="/clients/{{client.id}}">{{client.first_name}}</a></li>
+         {% endfor %}
+    </ul>
+</body>
+</html>

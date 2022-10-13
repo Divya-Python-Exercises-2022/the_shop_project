@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h1>Details of {{ client_details.client.first_name }} </h1>
+
+    <ul>
+        <li>First_name: {{ client_details.client.first_name }}</li>
+        <li>Last_name: {{ client_details.client.last_name }}</li>
+        <li>Email: {{ client_details.client.email }}</li>
+        <li>Phone: {{ client_details.client.phone}}</li>
+        <li>Street: {{ client_details.street }}</li>
+        <li>Number: {{ client_details.number }}</li>
+        <li>City: {{ client_details.city }}</li>
+        <li>Zip: {{ client_details.zip }}</li>
+        <li>country: {{ client_details.country }}</li>
+    </ul>
+
+    <a href="/clients">Back...</a>
+
+</body>
+</html>
