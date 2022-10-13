@@ -16,9 +16,7 @@
 
     <ul>
         {% for product in products %}
-        <li>
              <li><a href="/products/{{product.id}}">{{product.name}}</a> - ${{product.price}}</li>
-        </li>
          {% endfor %}
     </ul>
 </body>
